@@ -1,1 +1,187 @@
 
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fruit & Health Survey</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1 id="title" style="color: red;"> Fruit & Health Survey</h1>
+  <p id="description" style="color: red; font-weight: bold;"> Help us research healthy eating by completing this fruit survey.</p>
+<form id="survey-form"> 
+  <fieldset>
+     
+  <label id="name-label">Name 
+    <input type="text" id="name" required placeholder="What's your name"> </label>
+
+
+     <label id="email-label">Email <input type="email" id="email" required placeholder="How can we reach you?">
+ </label>
+  
+     <label id="number-label"> Age <input type="number" id="number" min="18" max="40" required placeholder="How old are you?"></label>
+        
+<label class="fruit-intake-dropdown"> How often do you eat fruit as part of your daily diet? </label>
+<select id="dropdown">
+    <option value="daily">
+      Every day, I eat fruit daily 
+  </option>     
+<option value="several"> Several times a week, I eat fruit regularly  </option>
+<option value="occasionally"> Occasionally, I eat fruit, but not regularly  </option>
+<option value="rarely"> Rarely, I almost never eat fruit  </option>
+<option value="never"> Never, I don't eat fruit at all  </option>
+</select>
+
+<label> On average, how many servings of fruit do you eat per day? </label>
+  <input type="radio" id="serving-1" name="serving" value="1" class="inline"> 1 serving of fruit per day
+<label> 
+  <input type="radio" id="serving-2" name="serving" value="2" class="inline"> 2 servings of fruit per day </label>
+
+<label> <input type="radio" id="serving-3" name="serving" value="3" class="inline">  3 servings of fruit per day
+</label>
+
+<label> <input type="radio" id="serving-more-3" name="serving" value="more than 3 servings" class="inline"> more than 3 servings of fruit per day </label>
+ 
+<label class="favorite-fruit">What is your favorite fruit?</label>
+<input type="text" id="favorite-fruit" name="favorite-fruit">
+ 
+  <label> When do you usually eat fruit?</label>     
+<label>
+<input type="checkbox" id="fruit-times-breakfast"  name="fruit-times" value="breakfast" class="inline"> Breakfast
+</label>
+
+<label>
+<input type="checkbox" id="morning-fruit" name="fruit-times" value="morning" class="inline"> In between in the morning </label>
+
+<label> 
+<input type="checkbox" id="lunch"
+name="fruit-times" value="lunch" class="inline">Lunch </label>
+
+<label>
+<input type="checkbox" id="afternoon-lunch" name="fruit-times" value="afternoon-lunch" class="inline">In between in the afternoon</label>
+
+<label>
+<input type="checkbox" id="dinner" name="fruit-times" value="dinner" class="inline">Dinner</label>
+
+<label>
+<input type="checkbox" id="evening-snack" name="fruit-times" value="evening-snack" class="inline">Evening snack</label>
+ 
+<label>
+<input type="checkbox" id="no-fruit" name="fruit-times" value="no-fruit" class="inline">I don't eat fruit</label>
+
+ <label class="form-label">Do you have any comments or suggestions for us? </label>
+
+ <textarea id="comments" name="comments" rows="4" cols="50" placeholder= "Enter your comments here...">
+  </textarea> 
+   
+ 
+  <input type="submit" id="submit" value="Submit"  style="background-color: red;">
+  
+ </form>
+
+</body>
+
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+background: #71F53E;
+   font-family: Verdana;
+  font-size: 16px;   
+}
+
+h1, p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+#surveyform { width: 80%;
+max-width: 500px;
+min-width: 300px;
+margin: 0 auto;
+padding-bottom: 2em;
+position: relative;
+}
+
+fieldset {border: none;
+padding: 2rem 0; 
+border-bottom: 3px solid #3b3b4f;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2.5em;
+}
+
+
+input, textarea {
+  background-color: white;
+  border: 1px solid #0a0a23;
+  color:   #000000;
+}
+
+
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b3b4f;
+  border-color: white;
+  min-width: 300px;
+}
+
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+
+}
+
+#name-label { margin-top: -20px;
+}
+
+.fruittimes {margin-bottom: 0px;
+}
+
+.fruit-intake-dropdown { margin-bottom: 0px;
+}
+
+.favorite-fruit{
+  margin-bottom: 0px;
+}
+
+#comments {
+  margin-top: 0px;
+}
+
+.form-label {
+  margin-top: 30px;
+}
+
+.content {
+    padding: 20px;
+}
+
