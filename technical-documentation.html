@@ -1,0 +1,572 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design Documentation</title> 
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+  </head> 
+  <body>
+    <div class="sleeve">
+      <nav id="navbar">
+        <header>
+          <h1>Responsive Web Design</h1></header>
+        <ul>
+          <li><a class="nav-link" href="#Intro_to_HTML_Forms">Intro to HTML Forms</a></li>
+          <li><a class="nav-link" href="#HTML_Form_Elements">HTML Form Elements</a></li>
+          <li><a class="nav-link" href="#Basic_CSS">Basic CSS</a></li>
+          <li><a class="nav-link" href="#CSS_Colors">CSS Colors</a></li>
+          <li><a class="nav-link" href="#CSS_Box_Model">CSS Box Model</a></li>
+          <li><a class="nav-link" href="#CSS_Flexbox">CSS Flexbox</a></li>
+          <li><a class="nav-link" href="#Typography">Typography</a></li>
+          <li><a class="nav-link" href="#Accessibility">Accessibility</a></li>
+          <li><a class="nav-link" href="#Pseudo_selectors">Pseudo selectors</a></li>
+          <li><a class="nav-link" href="#Intermediate_CSS">Intermediate CSS</a></li>
+          <li><a class="nav-link" href="#Responsive_Web_Design">Responsive Web Design</a></li>
+        </ul>
+      </nav>
+    </div> 
+  
+    <main id="main-doc">
+      <section class="main-section" id="Intro_to_HTML_Forms">
+        <header class="section-header">
+        <h2> Intro to HTML Forms</h2>
+        </header>
+        <p>
+    HTML forms are used to collect user data and send it to a server. They consist of various form elements that allow users to input information, such as text, choices, buttons, and more.
+  </p>
+        <p>
+    An HTML form is created using the <code>&lt;form&gt;</code> element. The form contains different input elements like <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>, and <code>&lt;button&gt;</code> that users interact with.</p>
+
+        <h3>Basic structure of an HTML form:</h3>
+        <pre class="code-block"><code>
+&lt;form action="submit_form.php" method="POST"&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name" required&gt;
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" required&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        <p>In this example:</p>
+        <ul>
+          <li>The form has an <code>action</code> that determines where the data will be sent.</li>
+          <li>The <code>method</code> specifies how the data is transmitted (POST or GET).</li>
+          <li>The input elements (<code>&lt;input&gt;</code>) include a    <code>type</code> to indicate what kind of data is being entered, such as text or email.</li>
+        </ul>
+
+      </section>
+      <section class="main-section" id="HTML_Form_Elements">
+        <header class="section-header">
+          <h2>HTML Form Elements</h2>
+        </header>
+          <p>HTML offers various elements for user input. Below are the most commonly used ones:</p>
+
+
+        <h3>1. Text Input</h3>
+          <pre class="code-block"><code>&lt;input type="text" name="username" placeholder="Enter your name"&gt;</code></pre>
+          <p>A basic text field for short input.</p>
+
+          <h3>2. Email Input</h3>
+          <pre class="code-block"><code>&lt;input type="email" name="email" placeholder="Enter your email"&gt;</code></pre>
+          <p>Automatically validates if the input is a valid email address.</p>
+
+          <h3>3. Password Input</h3>
+          <pre class="code-block"><code>&lt;input type="password" name="password"&gt;</code></pre>
+          <p>Masks the input with dots or asterisks.</p>
+
+          <h3>4. Textarea</h3>
+          <pre class="code-block"><code>&lt;textarea name="message" rows="4" cols="30"&gt;&lt;/textarea&gt;</code></pre>
+          <p>Used for longer text input such as messages or comments.</p>
+
+          <h3>5. Checkbox</h3>
+          <pre class="code-block"><code>&lt;label&gt;&lt;input type="checkbox" name="newsletter"&gt; Subscribe to newsletter&lt;/label&gt;</code></pre>
+          <p>Lets users select or deselect an option.</p>
+
+          <h3>6. Radio Buttons</h3>
+          <pre class="code-block"><code>&lt;label&gt;&lt;input type="radio" name="color" value="red"&gt; Red&lt;/label&gt;
+&lt;label&gt;&lt;input type="radio" name="color" value="blue"&gt; Blue&lt;/label&gt;</code></pre>
+          <p>Allows users to select only one option from a set.</p>
+
+          <h3>7. Select Dropdown</h3>
+          <pre class="code-block"><code>&lt;select name="language"&gt;
+  &lt;option value="en"&gt;English&lt;/option&gt;
+  &lt;option value="nl"&gt;Dutch&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+          <p>Used to create a dropdown menu with multiple options.</p>
+        </section>
+        <section class="main-section" id="Basic_CSS">
+          <header class="section-header">
+          <h2>Basic CSS</h2>
+          </header>
+            <p>CSS (Cascading Style Sheets) is used to style and layout web pages. It helps control the appearance of HTML elements, such as text, images, and layout.</p>
+
+            <h3>1. Changing Text Color</h3>
+            <pre class="code-block"><code>h1 { color: blue;}</code></pre>
+            <p>This changes the text color of all <code>&lt;h1&gt;</code> elements to blue, making the heading stand out more.</p>
+
+            <h3>2. Setting Background Color</h3>
+            <pre class="code-block"><code>body { background-color: lightgray;}</code></pre>
+            <p>This sets the background of the whole page to light gray, giving the page a neutral tone.</p>
+          
+            <h3>3. Changing Font Size</h3>
+            <pre class="code-block"><code>p {font-size: 16px;}</code></pre>
+            <p>This sets the font size of all paragraphs to 16 pixels, ensuring readability for the text.</p>
+
+            <h3>4. Adding Borders</h3>
+            <pre class="code-block"><code>img {border: 2px solid black;}</code></pre>
+            <p>This adds a solid black border around images, which can help make them visually distinct on the page.</p>
+
+            <h3>5. Adding Padding</h3>
+            <pre class="code-block"><code>div {padding: 10px;}</code></pre>
+            <p>This adds space inside the <code>&lt;div&gt;</code> element, around its content, preventing it from touching the edges of the element.</p> 
+            <ul>
+              <li>CSS controls the look and feel of the website, making it more visually appealing.</li>
+              <li>CSS uses selectors to target HTML elements and apply styles to them.</li>
+              <li>Values like <code>px</code>, <code>%</code>, and <code>em</code> control size, spacing, and layout.</li>
+              <li>CSS can be written inline within an HTML element, in a      <code>&lt;style&gt;</code> tag within the document head, or in an external stylesheet.</li>
+              <li>Basic properties include color, background-color, font-size, border, margin, and padding.</li>
+            </ul>
+          </section>
+          <section class="main-section" id="CSS_Colors">
+            <header class="section-header">
+            <h2>CSS Colors</h2>
+            </header>
+            <p>CSS allows you to add color to your webpage elements. There are several ways to define colors in CSS:</p>
+
+            <h3>1. Named Colors</h3>
+            <p>You can use common color names like <code>red</code>, <code>blue</code>, <code>green</code>, etc.</p>
+            <pre><code>h1 { color: red; }</code></pre>
+            <p>This will change the text color of the <code>&lt;h1&gt;</code> element to red.</p>
+
+            <h3>2. Hexadecimal Colors</h3>
+            <p>Hex codes start with <code>#</code> followed by 6 characters, usually representing RGB values.</p>
+            <pre><code>p { color: #00FF00; }</code></pre>
+              <p>This applies a green color to the text, using its hexadecimal representation.</p>
+
+            <h3>3. RGB Colors</h3>
+              <p>Use <code>rgb()</code> to define red, green, and blue values, where each value ranges from 0 to 255.</p>
+            <pre><code>div { background-color: rgb(255, 0, 0); }</code></pre>
+            <p>This sets the background color of the <code>&lt;div&gt;</code> element to red using the RGB model.</p>
+
+            <h3>4. HSL Colors</h3>
+            <p><code>hsl()</code> uses hue, saturation, and lightness to define colors. Hue is the color itself, saturation determines the intensity, and lightness sets the brightness.</p>
+            <pre><code>span { color: hsl(240, 100%, 50%); }</code></pre>
+            <p>This sets the color to a shade of blue with full saturation and medium lightness.</p>
+
+            <h3>5. Opacity with RGBA</h3>
+            <p>Add transparency using <code>rgba()</code>, which includes an alpha value for opacity, where <code>1</code> is fully opaque and <code>0</code> is fully transparent.</p>
+            <pre><code>.box { background-color: rgba(0, 0, 255, 0.5); }</code></pre>
+            <p>This creates a semi-transparent blue background for the <code>&lt;div&gt;</code> with an opacity of 50%.</p>
+
+            <ul>
+              <li><code>color</code> sets the text color.</li>
+                <li><code>background-color</code> sets the background color of elements.</li>
+              <li>CSS supports color definitions using names, hex, rgb, hsl, and rgba formats.</li>
+              </ul>
+            </section>
+            <section class="main-section" id="CSS_Box_Model">
+              <header class="section-header">
+              <h2>CSS Box Model</h2>
+              </header>
+
+              <p>In CSS, every element is represented as a box — this is called the box model. It describes how the width and height of elements are calculated.</p>
+              <p>The box model consists of four parts: content, padding, border, and margin.</p>
+
+              <ul>
+                <li>Content: the actual content (text or images).</li>
+                <li>Padding: space between the content and the border.</li>
+                <li>Border: the edge around the element.</li>
+                <li>Margin: space between this element and others.</li>
+              </ul>
+
+                  <p>Understanding the box model helps you control exactly how an element appears on the page.</p>
+                
+                <pre class="code-block"><code>div { 
+  width: 200px;
+  padding: 10px;
+  border: 2px solid black;
+  margin: 20px;
+}</code></pre>
+ 
+                <p>The total width is: 200 + 10*2 (padding) + 2*2 (border) = 224px.</p>
+
+                <p>Use <code>box-sizing: border-box</code> to include padding and border within the specified width.</p>
+
+                <pre><code>* {
+  box-sizing: border-box;
+}</code></pre>
+              </section>
+              <section class="main-section" id="CSS_Flexbox">
+                <header class="section-header">
+                <h2>CSS Flexbox</h2></header>
+                <p>Flexbox is a CSS layout model that makes it easier to design flexible and responsive layout structures.</p>
+                <p>It allows elements within a container to automatically adjust based on screen size and available space.</p>
+                <p>To use Flexbox, you set the container's <code>display</code> property to <code>flex</code>.</p>
+                <p>You can then use properties like <code>justify-content</code> and         <code>align-items</code> to control alignment.</p>
+                <p>Flexbox is useful for both horizontal and vertical layouts.</p>
+
+                <ul>
+                <li><code>display: flex;</code> – activates flex context.</li>
+                    <li><code>justify-content</code> – aligns items horizontally.</li>
+                    <li><code>align-items</code> – aligns items vertically.</li>
+                    <li><code>flex-direction</code> – sets the direction (row, column).</li>
+                    <li><code>flex-wrap</code> – allows items to wrap onto multiple lines.</li>
+                  </ul>
+
+                  <pre class="code-block"><code>display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+flex-wrap: wrap;
+</code></pre>
+                </section>
+                <section class="main-section" id="Typography">
+                  <header class="section-header"><h2>Typography</h2></header>
+                  <p>Typography in CSS controls how text appears on a webpage, including font style, size, spacing, and alignment.</p>
+                  <p>Good typography improves readability and user experience.</p>
+                  <p>You can set the font using the <code>font-family</code> property.</p>
+                  <p>The size of the text is adjusted with <code>font-size</code>.</p>
+                  <p>Other properties like <code>line-height</code> and <code>letter-spacing</code> fine-tune text appearance.</p>
+
+                  <ul>
+                    <li><code>font-family</code> – sets the typeface.</li>
+                    <li><code>font-size</code> – controls text size.</li>
+                    <li><code>line-height</code> – controls space between lines.</li>
+                    <li><code>letter-spacing</code> – controls space between letters.</li>
+                    <li><code>text-align</code> – aligns the text (left, center, right).</li>
+                  </ul>
+                  
+                  <pre class="code-block"><code>font-family: Arial, sans-serif;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.5px;
+text-align: center;
+</code></pre>
+                </section>
+                <section class="main-section" id="Accessibility">
+                  <header class="section-header"><h2>Accessibility</h2></header>
+                  <p>Accessibility makes websites usable for everyone, including people with disabilities who rely on screen readers or keyboard navigation.</p>
+                  <p>Semantic HTML elements help assistive technologies interpret content correctly.</p>
+                  <p>Tags like <code>&lt;label&gt;</code>, <code>&lt;button&gt;</code>, and <code>&lt;nav&gt;</code> improve accessibility and structure.</p>
+                  <p>Ensure all interactive elements are keyboard-accessible and that focus indicators are visible.</p>
+  <p>Always use descriptive <code>alt</code> text for images to convey their purpose or meaning.</p>
+
+                  <ul>
+                    <li>Use semantic tags like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code></li>
+                    <li>Link <code>&lt;label&gt;</code> to form inputs using the <code>for</code> attribute</li>
+                    <li>Make sure focus is clearly visible when tabbing</li>
+                    <li>Use meaningful link text (e.g., "Read more about pricing" instead of "Click here")</li>
+                    <li>Add captions or transcripts for audio and video content</li>
+                  </ul>
+                  
+                  <pre class="code-block"><code>&lt;label for="name"&gt;Name:&lt;/label&gt;</code>
+                  <code>&lt;input id="name" type="text"&gt;</code><br>
+                  <code>&lt;img src="photo.jpg" alt="Smiling cat"&gt;</code><br>
+                  <code>&lt;nav&gt;...&lt;/nav&gt;</code><br>
+                  <code>&lt;button&gt;Submit&lt;/button&gt;</code></pre>
+                </section>
+                <section class="main-section" id="Pseudo_selectors">
+                  <header class="section-header"><h2>Pseudo selectors</h2></header>
+                  <p>Pseudo-selectors let you style elements based on their state or position, even if they don’t have a class or ID.</p>
+                  <p>They start with a colon (<code>:</code>) and can be combined with regular selectors.</p>
+                  <p>Common pseudo-selectors include <code>:hover</code>,     <code>:focus</code>, <code>:first-child</code>, and <code>:nth-child()</code>.</p>
+                  <p>They are useful for interactivity and more precise targeting in CSS.</p>
+                  <p>You can style form elements, lists, or any element differently depending on user interaction.</p>
+
+                  <ul>
+                    <li><code>:hover</code> — when the mouse is over an element</li>
+                    <li><code>:focus</code> — when an element (like an input) is selected</li>
+                    <li><code>:first-child</code> — targets the first child of a parent</li>
+                    <li><code>:nth-child(2)</code> — targets the second child</li>
+                    <li><code>:active</code> — when an element is being clicked</li>
+                  </ul>
+                  
+                  <pre class="code-block"><code>button:hover { background-color: blue; }</code>
+                  <code>input:focus { border-color: green; }</code>
+                  <code>li:first-child { font-weight: bold; }</code><br>
+                  <code>p:nth-child(2) { color: gray; }</code><br>
+                  <code>a:active { color: red; }</code></pre>
+                </section>
+                <section class="main-section" id="Intermediate_CSS">
+                  <header class="section-header"><h2>Intermediate CSS</h2></header>
+                  <p>Intermediate CSS concepts dive deeper into styling techniques that help create responsive and well-structured websites.</p>
+                  <p>Common intermediate concepts include <code>CSS Grid</code>, <code>CSS Flexbox</code>, <code>transitions</code>, and     <code>animations</code>.</p>
+                  <p>These techniques allow you to create more dynamic layouts and interactive user interfaces.</p>
+                  <p>Mastering these concepts will help you build modern web applications.</p>
+
+                  <ul>
+                    <li><code>CSS Grid</code> — allows you to create complex two-dimensional layouts</li>
+                    <li><code>CSS Flexbox</code> — used for creating flexible, one-dimensional layouts</li>
+                    <li><code>Transitions</code> — enable smooth changes in style properties</li>
+                    <li><code>Animations</code> — used for creating keyframe-based animations in CSS</li>
+                    <li><code>Media Queries</code> — to adapt your website to different screen sizes</li>
+  </ul>
+  
+                  
+  <pre class="code-block"><code>.container { display: grid; grid-template-columns: repeat(3, 1fr); }</code>
+                  <code>.flex-container { display: flex; justify-content: center; }</code>
+                  <code>
+                    button { transition: background-color 0.3s ease; }</code>
+                  <code> @keyframes move { 0% { transform: translateX(0); } 100% { transform: translateX(100px); } }</code>
+                  <code>
+                    @media (max-width: 600px) { .container { grid-template-columns: 1fr; } }</code></pre>
+                </section>
+                <section class="main-section" id="Responsive_Web_Design">
+                  <header class="section-header"><h2>Responsive Web Design</h2></header>
+                  <p>Responsive web design (RWD) is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes.</p>
+                  <p>It ensures that websites work across different devices such as desktops, tablets, and mobile phones.</p>
+                  <p>Key concepts in responsive design include <code>fluid grids</code>, <code>flexible images</code>, and <code>media queries</code>.</p>
+
+                <ul>
+                  <li><code>Fluid Grids</code> — use percentage-based widths to create flexible layouts</li>
+                  <li><code>Flexible Images</code> — images that scale based on the viewport size</li>
+                  <li><code>Media Queries</code> — CSS rules that apply based on device characteristics like screen width</li>
+                  <li><code>Viewport Units</code> — use of units like <code>vw</code>, <code>vh</code> for responsive design</li>
+                  <li><code>Mobile-first Approach</code> — designing for smaller screens first and then scaling up</li>
+  </ul>
+  
+
+                <pre class="code-block"><code>body { max-width: 100%; margin: 0; }</code><br>
+                  <code>img { max-width: 100%; height: auto; }</code>
+                <code><br>
+                  @media (max-width: 768px) { .container { flex-direction: column; } }</code><br>
+                <code>html { font-size: 2vw; }</code><br>
+                <code>@media (min-width: 600px) { .container { display: grid; grid-template-columns: 1fr 1fr; } }</code></pre>
+              </section>
+            
+            </main>
+
+          
+           
+          </body>  
+        </html>
+
+** end of undefined **
+
+** start of undefined **
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+body {
+  display: flex;
+  font-size: 1rem;
+  font-family: 'roboto', sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+ 
+    
+    }
+  
+ #navbar h1 {
+   text-transform: uppercase;
+   font-size: 1rem;
+   margin-bottom: 20px;
+   background: linear-gradient(to right,#7b8e3c, #b9c79a );
+   color: white;
+   padding: 40px;
+   border-radius: 10px;
+   
+     
+}
+
+#navbar ul {
+   display: grid;
+   gap: 20px;
+   list-style-type: none; 
+ }
+
+#navbar a {
+
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  background-color: #2d4a2f;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+ 
+
+#navbar a:hover {
+  background-color: #a6b97d;
+  color: #f0f0f0;
+}
+
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #5a6b3d;
+  color: white;
+  padding: 20px;
+  
+
+}
+
+#main-doc {
+  height: 100vh;
+  overflow-y: auto;
+  margin-left: 250px;
+  padding: 20px;
+ 
+   
+}
+
+#intro .section-header h2 {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+#main-doc h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  color: #3b5323;
+}
+
+
+h3 {
+    margin-top: 20px;
+    color: #5a6b3d;
+}
+
+#main-doc ul {
+  padding-left: 60px;
+  line-height: 3.0;
+
+}
+ 
+
+.section-header {
+  max-width: 100%;
+  background-color: #e0ecd0;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: #3b5323;
+  
+  }
+ 
+section {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+  
+code, .code-block{
+  background-color: #e6efdf;
+  font-family: monospace;
+  padding: 2px 6px;
+  border-radius: 10px;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+ 
+#Intro_to_HTML_Forms pre {
+  
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#HTML_Form_Elements .code-block {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#Basic_CSS .code-block {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#CSS_Colors h3 {
+  margin-bottom: 12px;
+}
+
+#CSS_Colors pre {
+    margin-bottom: 20px;
+  margin-top: 20px;
+
+}
+
+#CSS_Box_Model pre {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#CSS_Flexbox .code-block {
+ margin-bottom: 20px;
+  margin-top: 20px;
+
+}
+
+#Typography .code-block {
+   margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#Accessibility .code-block {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#Pseudo_selectors .code-block {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#Intermediate_CSS .code-block {
+   margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#Responsive_Web_Design .code-block {
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+}
+
+ @media (max-width: 769px) {
+
+  #navbar {
+   
+    position: relative;
+    width: 100%;
+   
+  }
+
+  #main-doc {
+    margin-left: 0;
+    margin-top: 20px; 
+    padding: 10px;
+  } 
+
+}
+
+
+
+
+
+
+
+
+
+
+
+** end of undefined **
+
