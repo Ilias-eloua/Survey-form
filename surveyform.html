@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruit & Health Survey</title>
-    <link rel="stylesheet" href="surveyform.css">     
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">    
   </head>
   <body>
     <h1 id="title"> Fruit & Health  Survey</h1>
@@ -22,36 +23,35 @@
       </fieldset>
       <fieldset>
         <legend>Fruit Consumption Frequency </legend>
-        <label class="fruit-intake-dropdown"> How often do you eat fruit as part of your daily diet?</label>
+        <label> How often do you eat fruit as part of your daily diet?</label>
         <select id="dropdown">
           <option value="daily">
       Every day, I eat fruit daily 
           </option>     
-          <option value="several"> Several times a week, I eat fruit regularly </option>
-          <option value="occasionally"> Occasionally, I eat fruit, but not regularly </option>
-          <option value="rarely"> Rarely, I almost never eat fruit  </option>
-            <option value="never"> Never, I don't eat fruit at all</option>
+          <option value="several"> Several times a week, I eat fruit regularly</option>
+          <option value="occasionally"> Occasionally, I eat fruit, but not regularly</option>
+          <option value="rarely"> Rarely, I almost never eat fruit </option>
+          <option value="never"> Never, I don't eat fruit at all</option>
         </select>
-        </fieldset> 
-        <fieldset>
-          <legend>Fruit Servings Per Day</legend>
-          <label> On average, how many servings of fruit do you eat per day?</label>
-          <label>
-            <input type="radio" id="serving-1" name="serving" value="1" class="inline"> 1 serving of fruit per day</label>     
-          <label>
-            <input type="radio" id="serving-2" name="serving" value="2" class="inline"> 2 servings of fruit per day </label>
-          <label>
-            <input type="radio" id="serving-3" name="serving" value="3" class="inline">  3 servings of fruit per day</label>
-          <label>
-            <input type="radio" id="serving-more-3" name="serving" value="more than 3 servings" class="inline"> more than 3 servings of fruit per day</label>
-        </fieldset> 
-        <fieldset> 
-          <legend class="favorite-fruit">What is your favorite fruit?</legend>
-            <input type="text" id="favorite-fruit" name="favorite-fruit">
+      </fieldset> 
+      <fieldset>
+        <legend>Fruit Servings Per Day</legend>
+        <label> On average, how many servings of fruit do you eat per day?</label>
+        <label>
+          <input type="radio" id="serving-1" name="serving" value="1" class="inline"> 1 serving of fruit per day</label>     
+        <label>
+          <input type="radio" id="serving-2" name="serving" value="2" class="inline"> 2 servings of fruit per day</label>
+        <label>
+          <input type="radio" id="serving-3" name="serving" value="3" class="inline"> 3 servings of fruit per day</label>
+        <label class="radio-label">
+          <input type="radio" id="serving-more-3" name="serving" value="more than 3 servings" class="inline"> <span>more than 3 servings of fruit per day</span></label>
+      </fieldset> 
+      <fieldset> 
+        <legend>What is your favorite fruit?</legend>
+        <label>  <input type="text" name="favorite-fruit" class="favorite-fruit-input" placeholder="Bijv. appel, banaan, peer..."></label> 
         </fieldset>
-     
         <fieldset>
-          <legend id="fruit-question"> At which times of the day do you eat fruit?</legend> 
+          <legend> At which times of the day do you eat fruit?</legend> 
           <label>
             <input type="checkbox"   name="fruit-times" value="breakfast" class="inline">Breakfast</label>
           <label>
@@ -70,14 +70,13 @@
         <fieldset> 
           <legend>Feedback</legend>  
           <label class="form-label">Do you have any comments or suggestions for us?</label>        
-          <textarea id="comments" name="comments" rows="4" cols="50" placeholder= "Enter your comments here..."></textarea> 
+          <label> <textarea id="comments" name="comments" rows="4" cols="50" placeholder= "Enter your comments here..."></textarea></label> 
         </fieldset>
-        <input type="submit" id="submit" value="Submit">
-  
+          <input type="submit"  value="Submit" id="submit">
       </form>
     </div>
   </body>
-  </html>
+</html>
 
 
 
