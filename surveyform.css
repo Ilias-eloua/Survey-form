@@ -1,16 +1,23 @@
+* {
+  box-sizing: border-box;
+
+}
+
 body {
-  margin: 0;
-  background: #f9f9f9;
-  color: #333;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;  
+  background: #f9f9f9;
+  color: #333;
+  margin: 0;
+
 }
+
 .wrapper {
-  min-height: 100vh;
-  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 
 }
 
@@ -20,10 +27,12 @@ body {
   max-width: 600px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+
 }
 
 #title {
-  margin: 0.5em auto 0.5em;
+  margin: 0.625em 0 0.625em;
   text-align: center;
   color: #0077cc;
   font-size: 2.5em;
@@ -31,87 +40,135 @@ body {
 }
 
 #description {
-  margin: 1em auto;
+  margin: 1em 0;
   text-align: center;
   color: #888;
   font-size: 1.2em;
+
 }
 
 #survey-form {
+
   width: 100%;
   min-width: 300px;
+  padding-top: 1em;
   padding-bottom: 1em;
-  position: relative;
- 
+  padding-left: 2em; 
+  padding-right: 2em;
 }
 
+
 fieldset {
-  width: 90%;
+  width: 100%;
   border: 1px solid #ccc;
-  padding-right: 1.4em;
   margin: 1em auto;
   border-radius: 10px;
 }
 
-
 legend {
-  margin-bottom: 0em;
-  padding: 0;
+  margin-bottom: 1em;
   font-weight: bold;
   font-size: 1.2em;
   padding-left: 0.5em;
+  padding-right: 0.5em; 
+
+  }
 
  
-  }
 
 label {
   display: block;
-  margin: 0.75rem 0;  
+  margin: 0.5rem 1rem;  
 }
  
+ .radio-label {
+  display: flex;
+  flex-direction: row;
+}
+
+.radio-label span {
+  margin-top: 14px;
+}
+
+
 input,
 textarea,
-select {
+select  {
   background-color: #fff;
   color: #333;
   margin: 10px 0 0 0;
   width: 100%;
-  padding: 0.4em;
-  min-height: 2.5em;
+  max-width: 400px;
+  padding: 1rem;
+  height: 3rem;
   border: 1px solid #ccc;
   border-radius: 10px;
-}
+   
+ }
 
-select { width: 102.5%;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-left: 0.4em;
-    padding-right: 0.4em;
+select {
+display: block;
+width: 95%;
+margin: 0 auto;
+
 }
 
 .inline {
   width: unset;
-  margin: 0 0.5em 0 0;
+  margin: 0 0.5rem 0 0;
   vertical-align: middle;
+  
   }
 
+textarea {
+  padding-bottom: 80px;
+}
 
 input[type="submit"] {
   display: block;
-  width: 90%;
-  padding: 0.4em;
-  margin:1em auto;
-  margin-bottom: 0;
-  min-height: 2.5em;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  height: 4.0rem;
   font-size: 1.1rem;
   background-color: #0077cc;
   color: white;
   border-color: #0056b3;
   min-width: 300px;
+  max-width: 490px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-
-input[type="submit"]:hover {background-color: #0056b3;
 
 }
+
+input[type="submit"]:hover{background-color: #0056b3;
+  transition: background-color 0.3s ease-in-out; 
+
+}
+
+@media (max-width: 768px) {
+  input[type="submit"] {
+
+    padding: 0.8rem;
+    font-size: 1rem;
+    margin: 1rem auto;
+    min-width: 120px; 
+    max-width: 400px;
+    height: 3rem;  
+  }
+
+
+  select {
+    width: 86%; 
+    margin: 0 auto 2.5rem; 
+    padding: 0.8rem;
+    
+  }
+
+  textarea {
+    padding-bottom: 60px;
+  }
+}
+
+
+
