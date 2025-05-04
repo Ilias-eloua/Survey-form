@@ -55,6 +55,7 @@ body {
   padding-bottom: 1em;
   padding-left: 2em; 
   padding-right: 2em;
+  margin: 0 auto;
 }
 
 
@@ -169,6 +170,9 @@ input[type="submit"]:hover{background-color: #0056b3;
     padding-bottom: 60px;
   }
 }
+
+
+
 
 
 
