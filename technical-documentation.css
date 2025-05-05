@@ -5,7 +5,6 @@
 }
 
 
-
 body {
   display: flex;
   font-size: 1rem;
@@ -13,16 +12,18 @@ body {
   background-color: #f4f4f4;
   line-height: 1.6;
  
-    }
+}
   
  #navbar h1 {
    text-transform: uppercase;
    font-size: 1rem;
-   margin-bottom: 20px;
-   background: linear-gradient(to right,#7b8e3c, #b9c79a );
-   color: white;
    padding: 40px;
+   margin-bottom: 20px;
    border-radius: 10px;
+   background: linear-gradient(to right, #8f9e5b, #c1d59b); 
+   color: white;
+    
+   
         
 }
 
@@ -41,15 +42,15 @@ body {
   background-color: #2d4a2f;
   border-radius: 10px;
   transition: background-color 0.3s ease, color 0.3s ease;
+   
 
 }
  
-
 #navbar a:hover {
   background-color: #a6b97d;
-  color: #f0f0f0;
+  color: #3a3a3a;
+   
 }
-
 
 #navbar {
   position: fixed;
@@ -58,9 +59,11 @@ body {
   width: 250px;
   height: 100vh;
   overflow-y: auto;
-  background-color: #5a6b3d;
-  color: white;
   padding: 20px;
+  color: white;
+  background: linear-gradient(to right, #7b8e3c, #b9c79a);
+
+   
   
 }
 
@@ -153,9 +156,11 @@ code, .code-block{
     }
 
   #navbar ul {
-    gap: 10px; 
-
+    gap: 13px; 
+     
   }
+
+
 
   #navbar {
     position: relative;
@@ -233,6 +238,12 @@ code, .code-block{
   }
 
 }
+
+
+
+
+
+
 
 
 
