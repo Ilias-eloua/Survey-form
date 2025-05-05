@@ -157,7 +157,6 @@ code, .code-block{
     position: relative;
     width: 100%;
     padding: 10px;
-    overflow-y: auto;
    
   }
 
@@ -187,17 +186,18 @@ code, .code-block{
    section {
     margin-bottom: 10px;
     padding: 10px; 
-     
+
   }
 
   h3 {
     margin-top: 10px; 
+
   }
 
    #main-doc ul {
     padding-left: 20px; 
     line-height: 2.0; 
-     
+
   }
 
  code, .code-block {
@@ -220,14 +220,19 @@ code, .code-block{
   #Responsive_Web_Design .code-block {
   margin-top: 10px;
   margin-bottom: 10px;
-    
+
 }
 
  #CSS_Colors h3 {
     margin-bottom: 6px;
     
   }
+
 }
+
+
+
+
 
 
 
