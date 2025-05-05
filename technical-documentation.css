@@ -40,15 +40,7 @@ body {
   background-color: #2d4a2f;
   border-radius: 10px;
   transition: background-color 0.3s ease, color 0.3s ease;
-   
-
-}
- 
-#navbar a:hover,
-#navbar a:visited {
-  background-color: #a6b97d; 
-  color: #3a3a3a;
-
+  
 }
 
 #navbar a:visited,
