@@ -48,6 +48,15 @@ body {
 #navbar a:visited {
   background-color: #a6b97d; 
   color: #3a3a3a;
+
+}
+
+#navbar a:visited,
+#navbar a:hover,
+#navbar a:focus,
+#navbar a:active {
+  background-color: #a6b97d;
+  color: #3a3a3a;
 }
 
 #navbar {
@@ -227,9 +236,6 @@ code, .code-block{
   }
 
 }
-
-
-
 
 
 
