@@ -44,10 +44,10 @@ body {
 
 }
  
-#navbar a:hover {
-  background-color: #a6b97d;
+#navbar a:hover,
+#navbar a:visited {
+  background-color: #a6b97d; 
   color: #3a3a3a;
-   
 }
 
 #navbar {
@@ -60,9 +60,7 @@ body {
   padding: 20px;
   color: white;
   background: linear-gradient(to right, #7b8e3c, #b9c79a);
-
-   
-  
+ 
 }
 
 #main-doc {
@@ -229,6 +227,14 @@ code, .code-block{
   }
 
 }
+
+
+
+
+
+
+
+
 
 
 
