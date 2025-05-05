@@ -185,11 +185,12 @@ input[type="submit"]:hover{background-color: #0056b3;
   select {
     max-width: 100%;
     padding: 0.8rem; 
-    height: 2.8rem; 
+    height: 3.5rem; 
   }
 
   
  input[type="submit"] {
+    width: 100%;
     max-width: 100%;
     height: 3.5rem;
     font-size: 1rem;
